@@ -4,10 +4,11 @@
   "title": "RegisterStudentCommandPayloadV1",
   "type": "object",
   "additionalProperties": false,
-  "required": ["firstName", "lastName", "dateOfBirth", "gender", "guardian"],
+  "required": ["firstName", "lastName", "fatherName", "dateOfBirth", "gender", "guardian"],
   "properties": {
     "firstName": { "type": "string", "minLength": 1, "maxLength": 100 },
     "lastName": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "fatherName": { "type": "string", "minLength": 1, "maxLength": 200 },
     "dateOfBirth": { "type": "string", "format": "date" },
     "gender": { "enum": ["female", "male"] },
     "guardian": {
