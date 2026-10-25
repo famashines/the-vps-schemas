@@ -21,3 +21,13 @@ Names and layout: `the-vps-docs/schemas-structure.md`.
 
 Each schema must have at least one valid and one invalid example. CI runs the
 same check on each pull request.
+
+## Release
+
+Change `version` in `package.json` in a pull request. After the merge, tag
+the merge commit on `main` with `v<version>` and push the tag. Other repos
+install a fixed tag, for example:
+
+    "@famashines/the-vps-schemas": "github:famashines/the-vps-schemas#v0.1.0"
+
+A tag is never moved or deleted.
