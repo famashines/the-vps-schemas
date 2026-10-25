@@ -1,0 +1,9 @@
+{
+  "chargeId": "8f7e6d5c-4b3a-4c2d-8e1f-0a9b8c7d6e5f",
+  "accountId": "4c3b2a19-8d7e-4f6a-9b5c-4d3e2f1a0b9c",
+  "amount": {
+    "amount": 450000,
+    "currency": "PKR"
+  },
+  "reason": "Charged twice by mistake"
+}

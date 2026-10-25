@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:shared:MoneyV1",
+  "title": "MoneyV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "amount",
+    "currency"
+  ],
+  "properties": {
+    "amount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "currency": {
+      "const": "PKR"
+    }
+  }
+}

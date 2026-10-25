@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:fees:ChargeReversedEventPayloadV1",
+  "title": "ChargeReversedEventPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "chargeId",
+    "accountId",
+    "amount",
+    "reason"
+  ],
+  "properties": {
+    "chargeId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "accountId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "amount": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "currency": {
+          "const": "PKR"
+        }
+      }
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500,
+      "pattern": "^\\S(.*\\S)?$"
+    }
+  }
+}

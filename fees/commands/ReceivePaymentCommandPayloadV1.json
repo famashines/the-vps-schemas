@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:fees:ReceivePaymentCommandPayloadV1",
+  "title": "ReceivePaymentCommandPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "accountId",
+    "amount",
+    "method"
+  ],
+  "properties": {
+    "accountId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "amount": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "minimum": 100
+        },
+        "currency": {
+          "const": "PKR"
+        }
+      }
+    },
+    "method": {
+      "const": "cash"
+    }
+  }
+}

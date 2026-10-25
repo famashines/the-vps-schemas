@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:fees:PaymentReversedEventPayloadV1",
+  "title": "PaymentReversedEventPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "paymentId",
+    "accountId",
+    "receiptNumber",
+    "amount",
+    "reason"
+  ],
+  "properties": {
+    "paymentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "accountId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "receiptNumber": {
+      "type": "string",
+      "pattern": "^R-[0-9]{4}-[0-9]{2}-[0-9]{6}$"
+    },
+    "amount": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "minimum": 100
+        },
+        "currency": {
+          "const": "PKR"
+        }
+      }
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500,
+      "pattern": "^\\S(.*\\S)?$"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "paymentId": "6a5b4c3d-2e1f-4a0b-9c8d-7e6f5a4b3c2d",
+  "accountId": "4c3b2a19-8d7e-4f6a-9b5c-4d3e2f1a0b9c",
+  "amount": {
+    "amount": 450000,
+    "currency": "PKR"
+  },
+  "method": "cash",
+  "receiptNumber": "R-2026-000001"
+}
