@@ -1,11 +1,22 @@
 {
   "name": "@famashines/the-vps-schemas",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0",
   "description": "JSON Schema contracts for the-vps",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/famashines/the-vps-schemas.git"
+  },
   "type": "module",
-  "engines": {
-    "node": ">=24"
+  "engines": { "node": ">=24" },
+  "files": ["shared", "admissions"],
+  "exports": {
+    "./package.json": "./package.json",
+    "./*": "./*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "test": "node test.mjs"
