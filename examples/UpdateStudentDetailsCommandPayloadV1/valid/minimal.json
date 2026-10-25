@@ -1,0 +1,14 @@
+{
+  "studentId": "0b8e6f3a-6a2e-4f7e-9a51-2f1d3c4b5a69",
+  "expectedVersion": 1,
+  "firstName": "Ayesha",
+  "lastName": "Khan",
+  "fatherName": "Imran Khan",
+  "dateOfBirth": "2016-03-14",
+  "gender": "female",
+  "guardian": {
+    "name": "Imran Khan",
+    "relation": "father",
+    "phone": "+923001234567"
+  }
+}
