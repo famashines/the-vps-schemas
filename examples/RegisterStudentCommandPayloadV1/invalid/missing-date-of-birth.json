@@ -1,6 +1,11 @@
 {
   "firstName": "Ayesha",
   "lastName": "Khan",
+  "fatherName": "Imran Khan",
   "gender": "female",
-  "guardian": { "name": "Imran Khan", "relation": "father", "phone": "+923001234567" }
+  "guardian": {
+    "name": "Imran Khan",
+    "relation": "father",
+    "phone": "+923001234567"
+  }
 }

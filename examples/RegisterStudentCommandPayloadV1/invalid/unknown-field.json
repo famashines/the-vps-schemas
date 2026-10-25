@@ -1,8 +1,13 @@
 {
   "firstName": "Ayesha",
   "lastName": "Khan",
+  "fatherName": "Imran Khan",
   "dateOfBirth": "2016-03-14",
   "gender": "female",
-  "guardian": { "name": "Imran Khan", "relation": "father", "phone": "+923001234567" },
+  "guardian": {
+    "name": "Imran Khan",
+    "relation": "father",
+    "phone": "+923001234567"
+  },
   "grade": "3"
 }
