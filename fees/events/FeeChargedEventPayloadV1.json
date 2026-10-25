@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:fees:FeeChargedEventPayloadV1",
+  "title": "FeeChargedEventPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "chargeId",
+    "accountId",
+    "kind",
+    "amount",
+    "dueOn"
+  ],
+  "properties": {
+    "chargeId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "accountId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "kind": {
+      "enum": [
+        "admission",
+        "annual",
+        "monthly"
+      ]
+    },
+    "month": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+    },
+    "amount": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "currency": {
+          "const": "PKR"
+        }
+      }
+    },
+    "dueOn": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "if": {
+    "properties": {
+      "kind": {
+        "const": "monthly"
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "month"
+    ]
+  },
+  "else": {
+    "not": {
+      "required": [
+        "month"
+      ]
+    }
+  }
+}

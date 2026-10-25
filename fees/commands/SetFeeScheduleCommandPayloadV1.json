@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:fees:SetFeeScheduleCommandPayloadV1",
+  "title": "SetFeeScheduleCommandPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "academicYearId",
+    "grade",
+    "monthlyFee"
+  ],
+  "properties": {
+    "academicYearId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "grade": {
+      "enum": [
+        "playgroup",
+        "nursery",
+        "prep",
+        "class-1",
+        "class-2",
+        "class-3",
+        "class-4",
+        "class-5",
+        "class-6",
+        "class-7",
+        "class-8",
+        "class-9",
+        "class-10"
+      ]
+    },
+    "monthlyFee": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "currency": {
+          "const": "PKR"
+        }
+      }
+    },
+    "admissionFee": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "currency": {
+          "const": "PKR"
+        }
+      }
+    },
+    "annualFee": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "currency": {
+          "const": "PKR"
+        }
+      }
+    }
+  }
+}

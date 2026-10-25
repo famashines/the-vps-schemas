@@ -1,6 +1,6 @@
 {
   "name": "@famashines/the-vps-schemas",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "description": "JSON Schema contracts for the-vps",
   "license": "UNLICENSED",
@@ -10,7 +10,7 @@
   },
   "type": "module",
   "engines": { "node": ">=24" },
-  "files": ["shared", "admissions"],
+  "files": ["shared", "admissions", "fees"],
   "exports": {
     "./package.json": "./package.json",
     "./*": "./*"
