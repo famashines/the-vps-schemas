@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:admissions:AcademicYearOpenedEventPayloadV1",
+  "title": "AcademicYearOpenedEventPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["academicYearId", "name", "startsOn", "endsOn"],
+  "properties": {
+    "academicYearId": { "type": "string", "format": "uuid" },
+    "name": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}$" },
+    "startsOn": { "type": "string", "format": "date" },
+    "endsOn": { "type": "string", "format": "date" }
+  }
+}
