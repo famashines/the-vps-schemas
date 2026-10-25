@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:admissions:EnrollStudentCommandPayloadV1",
+  "title": "EnrollStudentCommandPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["studentId", "classSectionId"],
+  "properties": {
+    "studentId": { "type": "string", "format": "uuid" },
+    "classSectionId": { "type": "string", "format": "uuid" }
+  }
+}

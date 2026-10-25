@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:admissions:StudentEnrolledEventPayloadV1",
+  "title": "StudentEnrolledEventPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["enrollmentId", "studentId", "classSectionId", "academicYearId"],
+  "properties": {
+    "enrollmentId": { "type": "string", "format": "uuid" },
+    "studentId": { "type": "string", "format": "uuid" },
+    "classSectionId": { "type": "string", "format": "uuid" },
+    "academicYearId": { "type": "string", "format": "uuid" }
+  }
+}
