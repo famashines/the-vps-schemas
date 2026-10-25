@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:admissions:StudentSectionChangedEventPayloadV1",
+  "title": "StudentSectionChangedEventPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "enrollmentId",
+    "studentId",
+    "academicYearId",
+    "classSectionId",
+    "previousClassSectionId"
+  ],
+  "properties": {
+    "enrollmentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "studentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "academicYearId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "classSectionId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "previousClassSectionId": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}
