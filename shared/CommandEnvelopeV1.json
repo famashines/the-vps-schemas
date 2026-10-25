@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:shared:CommandEnvelopeV1",
+  "title": "CommandEnvelopeV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["commandId", "commandType", "version", "issuedAt", "issuedBy", "correlationId", "payload"],
+  "properties": {
+    "commandId": { "type": "string", "format": "uuid" },
+    "commandType": { "type": "string", "pattern": "^[a-z][a-z-]*\\.[A-Z][A-Za-z]*$" },
+    "version": { "type": "integer", "minimum": 1 },
+    "issuedAt": { "type": "string", "format": "date-time" },
+    "issuedBy": { "type": "string", "format": "uuid" },
+    "correlationId": { "type": "string", "format": "uuid" },
+    "payload": { "type": "object" }
+  }
+}

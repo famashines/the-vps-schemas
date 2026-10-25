@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:admissions:RegisterStudentCommandPayloadV1",
+  "title": "RegisterStudentCommandPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["firstName", "lastName", "dateOfBirth", "gender", "guardian"],
+  "properties": {
+    "firstName": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "lastName": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "dateOfBirth": { "type": "string", "format": "date" },
+    "gender": { "enum": ["female", "male"] },
+    "guardian": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "relation", "phone"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "relation": { "enum": ["father", "mother", "guardian"] },
+        "phone": { "type": "string", "pattern": "^\\+[1-9][0-9]{7,14}$" }
+      }
+    }
+  }
+}
