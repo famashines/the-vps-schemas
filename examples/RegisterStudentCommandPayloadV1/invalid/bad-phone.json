@@ -1,0 +1,7 @@
+{
+  "firstName": "Ayesha",
+  "lastName": "Khan",
+  "dateOfBirth": "2016-03-14",
+  "gender": "female",
+  "guardian": { "name": "Imran Khan", "relation": "father", "phone": "0300-1234567" }
+}
