@@ -4,9 +4,18 @@
   "title": "EnrollStudentCommandPayloadV1",
   "type": "object",
   "additionalProperties": false,
-  "required": ["studentId", "classSectionId"],
+  "required": [
+    "studentId",
+    "classId"
+  ],
   "properties": {
-    "studentId": { "type": "string", "format": "uuid" },
-    "classSectionId": { "type": "string", "format": "uuid" }
+    "studentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "classId": {
+      "type": "string",
+      "format": "uuid"
+    }
   }
 }

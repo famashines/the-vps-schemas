@@ -9,7 +9,7 @@
     "studentId",
     "enrollmentId",
     "academicYearId",
-    "classSectionId",
+    "classId",
     "grade",
     "openedOn"
   ],
@@ -30,15 +30,15 @@
       "type": "string",
       "format": "uuid"
     },
-    "classSectionId": {
+    "classId": {
       "type": "string",
       "format": "uuid"
     },
     "grade": {
       "enum": [
         "playgroup",
-        "nursery",
-        "prep",
+        "kg-1",
+        "kg-2",
         "class-1",
         "class-2",
         "class-3",

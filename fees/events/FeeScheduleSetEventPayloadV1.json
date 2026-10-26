@@ -22,8 +22,8 @@
     "grade": {
       "enum": [
         "playgroup",
-        "nursery",
-        "prep",
+        "kg-1",
+        "kg-2",
         "class-1",
         "class-2",
         "class-3",
