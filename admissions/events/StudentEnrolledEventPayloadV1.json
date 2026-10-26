@@ -4,11 +4,28 @@
   "title": "StudentEnrolledEventPayloadV1",
   "type": "object",
   "additionalProperties": false,
-  "required": ["enrollmentId", "studentId", "classSectionId", "academicYearId"],
+  "required": [
+    "enrollmentId",
+    "studentId",
+    "classId",
+    "academicYearId"
+  ],
   "properties": {
-    "enrollmentId": { "type": "string", "format": "uuid" },
-    "studentId": { "type": "string", "format": "uuid" },
-    "classSectionId": { "type": "string", "format": "uuid" },
-    "academicYearId": { "type": "string", "format": "uuid" }
+    "enrollmentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "studentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "classId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "academicYearId": {
+      "type": "string",
+      "format": "uuid"
+    }
   }
 }

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:admissions:CloseClassCommandPayloadV1",
+  "title": "CloseClassCommandPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "classId",
+    "expectedVersion"
+  ],
+  "properties": {
+    "classId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "expectedVersion": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}
