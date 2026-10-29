@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:admissions:CancelStudentLeavingCommandPayloadV1",
+  "title": "CancelStudentLeavingCommandPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "studentId",
+    "expectedVersion"
+  ],
+  "properties": {
+    "studentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "expectedVersion": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

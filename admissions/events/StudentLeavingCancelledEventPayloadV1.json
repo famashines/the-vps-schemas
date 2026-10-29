@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:famashines:the-vps:admissions:StudentLeavingCancelledEventPayloadV1",
+  "title": "StudentLeavingCancelledEventPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "studentId",
+    "leftOn"
+  ],
+  "properties": {
+    "studentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "leftOn": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}
