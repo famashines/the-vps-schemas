@@ -1,0 +1,19 @@
+{
+  "firstName": "Ayesha",
+  "lastName": "Khan",
+  "fatherName": "Imran Khan",
+  "dateOfBirth": "2016-03-14",
+  "gender": "female",
+  "bFormNumber": "35202-1234567-8",
+  "familyStatus": "both-parents-alive",
+  "siblings": {
+    "count": 1,
+    "studentIds": []
+  },
+  "guardian": {
+    "name": "Imran Khan",
+    "relation": "father",
+    "phone": "+923001234567",
+    "cnic": "35202-7654321-9"
+  }
+}

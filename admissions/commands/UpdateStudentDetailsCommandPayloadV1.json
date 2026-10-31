@@ -12,7 +12,11 @@
     "fatherName",
     "dateOfBirth",
     "gender",
-    "guardian"
+    "guardian",
+    "bFormNumber",
+    "address",
+    "familyStatus",
+    "siblings"
   ],
   "properties": {
     "studentId": {
@@ -48,13 +52,60 @@
         "male"
       ]
     },
+    "bFormNumber": {
+      "type": "string",
+      "pattern": "^[0-9]{5}-[0-9]{7}-[0-9]$"
+    },
+    "address": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "familyStatus": {
+      "enum": [
+        "both-parents-alive",
+        "father-deceased",
+        "mother-deceased",
+        "both-parents-deceased"
+      ]
+    },
+    "familyStatusNote": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "siblings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "count",
+        "studentIds"
+      ],
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "studentIds": {
+          "type": "array",
+          "maxItems": 20,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      }
+    },
     "guardian": {
       "type": "object",
       "additionalProperties": false,
       "required": [
         "name",
         "relation",
-        "phone"
+        "phone",
+        "cnic"
       ],
       "properties": {
         "name": {
@@ -72,6 +123,10 @@
         "phone": {
           "type": "string",
           "pattern": "^\\+[1-9][0-9]{7,14}$"
+        },
+        "cnic": {
+          "type": "string",
+          "pattern": "^[0-9]{5}-[0-9]{7}-[0-9]$"
         }
       }
     }
