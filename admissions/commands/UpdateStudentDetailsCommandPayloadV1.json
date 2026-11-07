@@ -11,6 +11,7 @@
     "lastName",
     "fatherName",
     "dateOfBirth",
+    "admissionDate",
     "gender",
     "guardian",
     "bFormNumber",
@@ -43,6 +44,10 @@
       "maxLength": 200
     },
     "dateOfBirth": {
+      "type": "string",
+      "format": "date"
+    },
+    "admissionDate": {
       "type": "string",
       "format": "date"
     },

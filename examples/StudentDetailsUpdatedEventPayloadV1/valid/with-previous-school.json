@@ -4,6 +4,7 @@
   "lastName": "Khan",
   "fatherName": "Imran Khan",
   "dateOfBirth": "2016-03-14",
+  "admissionDate": "2026-04-01",
   "gender": "female",
   "guardian": {
     "name": "Imran Khan",
