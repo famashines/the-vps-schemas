@@ -12,6 +12,7 @@
     "lastName": { "type": "string", "minLength": 1, "maxLength": 100 },
     "fatherName": { "type": "string", "minLength": 1, "maxLength": 200 },
     "dateOfBirth": { "type": "string", "format": "date" },
+    "admissionDate": { "type": "string", "format": "date" },
     "gender": { "enum": ["female", "male"] },
     "bFormNumber": { "type": "string", "pattern": "^[0-9]{5}-[0-9]{7}-[0-9]$" },
     "address": { "type": "string", "minLength": 1, "maxLength": 300 },
